@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MatheusBooks</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .imagem-responsiva {
+      max-width: 80%;
+      height: auto;
+    }
+  
+    @media (min-width: 3750px) {
+      img {
+        width: 20%;
+      }
+    }
+  
+    @media (max-width: 2000px) {
+      img {
+        width: 90%; /* Quase toda a largura da tela */
+      }
+    }
+  
+    @media (max-width: 3000px) {
+      img {
+        width: 40%; /* Metade do tamanho */
+        height: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="cabeçalho">
+    <div class="container">
+      <input type="checkbox" id="menu" class="container__botao">
+      <label for="menu">
+        <span class="cabeçalho__menu-hamburguer container__imagem"></span>
+      </label>
+      <ul class="lista-menu">
+        <li class="lista-menu__titulo">Categorias</li>
+        <li class="lista-menu__item">
+          <a href="#" class="lista-menu__link">Ficção</a>
+        </li>
+        <li class="lista-menu__item">
+          <a href="#" class="lista-menu__link">Biografia</a>
+        </li>
+        <li class="lista-menu__item">
+          <a href="#" class="lista-menu__link">Educativo</a>
+        </li>
+        <li class="lista-menu__item">
+          <a href="#" class="lista-menu__link">Filosofia</a>
+        </li>
+        <li class="lista-menu__item">
+          <a href="#" class="lista-menu__link">Poema</a>
+        </li>
+      </ul>
+    </div>
+    <div class="container">
+      <a href="#"><img src="img/Favoritos.svg" alt="Meus favoritos" class="container__imagem"></a>
+      <a href="#"><img src="img/Compras.svg" alt="Carrinhos de compras" class="container__imagem"></a>
+      <a href="#"><img src="img/Usuario.svg" alt="Meu perfil" class="container__imagem"></a>
+    </div>
+  </header>
+
+  <section class="banner">
+    <h2 class="banner__titulo">Veja a nossa coleção!</h2>
+    <p class="banner__texto">A nossa bibloteca virtual possui inúmeros títulos célebres e interessantes</p>
+    <input type="search" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
+  </section>
+
+  <section class="carrossel">
+    <h2 class="carrossel__titulo">Lançamentos recentes</h2>
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"> <img src="img/Apachekafka.png" alt="Livro A Metarmofose" height="875px" class="imagem-responsiva"></div>
+        <div class="swiper-slide"> <img src="img/Liderança.png" alt="Livro Galileu Galilei" class="imagem-responsiva"></div>
+        <div class="swiper-slide"> <img src="img/Javascript.png" alt="Livro O Anticristo" height="875px" class="imagem-responsiva"> </div>
+        <div class="swiper-slide"> <img src="img/Guia Front-end.png" alt="Livro A República" height="875px" class="imagem-responsiva"/> </div>
+        <div class="swiper-slide"> <img src="img/Portugol.png" alt="Livro Harry Potter" height="875px" class="imagem-responsiva"/> </div>
+        <div class="swiper-slide"> <img src="img/Acessibilidade.png" alt="Livro Cálculo I" height="875px" class="imagem-responsiva"/> </div>
+      </div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+    </div>
+
+    <div class="card">
+      <div class="card__descrição">
+        <div class="descrição">
+          <h3 class="descrição__titulo">Talvez você também se interesse por...</h3>
+          <h2 class="descrição__titulo-livro">Nicolas Deminco</h2>
+          <p class="descrição__texto">
+            Alugando um servo (Nicolas). Ao comprar a subscrição do site, ele sai de graça!
+          </p>
+        </div>
+        <img src="img/Angular.jpg" class="descrição__imagem" width="80px"/>
+      </div>
+      <div class="card__botões">
+        <ul class="botões">
+        </ul>
+        <a href="#" class="botões__ancora">Aprofunde-se</a>
+      </div>
+    </div>
+
+  </section>
+
+  <section class=”carrossel”>
+    <h2 class="carrossel__titulo">Best Sellers</h2>
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"> <img src="img/ApacheKafka.png" alt="Livro sobre apache kafka e spring boot da alura books" height="875px" class="imagem-responsiva"> </div>
+        <div class="swiper-slide"> <img src="img/Liderança.png" alt="Livro sobre liderança em design da alura books" height="875px" class="imagem-responsiva"> </div>
+        <div class="swiper-slide"> <img src="img/Javascript.png" alt="Livro sobre javascript assertivo da alurabooks" height="875px" class="imagem-responsiva"> </div>
+        <div class="swiper-slide"> <img src="img/Guia Front-end.png" alt="Livro Guia front end" height="875px" class="imagem-responsiva"> </div>
+        <div class="swiper-slide"> <img src="img/Portugol.png" alt="Livro sobre portugol" height="875px" class="imagem-responsiva"> </div>
+        <div class="swiper-slide"> <img src="img/Acessibilidade.png" alt="livro sobre acessibilidade" height="875px" class="imagem-responsiva"> </div>
+      </div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+    <div class="card">
+      <!-- 1º linha -->
+      <div class="card__descrição">
+        <!-- 1º coluna -->
+        <div class="descrição">
+          <img src="img/Estrelinhas.svg" alt="Avaliação 5 estrelas">
+          <h3 class="descrição__titulo">Autor do Mês</h3>
+          <h2 class="descrição__titulo-livro">Matheus Prestjord</h2>
+          <p class="descrição__texto">Estudante e escritor, Matheus é um amor de pessoa.
+          </p>
+        </div>
+        <!-- 2º coluna -->
+        <img src="img/Escritora.png" class="descrição__imagem imagem-responsiva" height="400px">
+      </div>
+
+      <!-- 2º linha -->
+      <div class="card__botões">
+        <!-- 1º coluna -->
+        <ul class="botões">
+        </ul>
+        <!-- 2º coluna -->
+        <a href="#" class="botões__ancora">Aprofunde-se</a>
+      </div>
+    </div>
+
+
+
+  </section>
+
+  <section class="tópicos">
+    <h2 class="tópicos__titulo">TEMAS MAIS CONSULTADOS RECENTEMENTE</h2>
+    <ul class="tópicos__lista">
+      <li class="tópicos__item"><a href="#" class="tópicos__link">Nilismo</a></li>
+      <li class="tópicos__item">
+        <a href="#" class="tópicos__link">Lei dos grandes números</a>
+      </li>
+      <li class="tópicos__item">
+        <a href="#" class="tópicos__link">Magia</a>
+      </li>
+      <li class="tópicos__item">
+        <a href="#" class="tópicos__link">Alegoria da Caverna</a>
+      </li>
+      <li class="tópicos__item">
+        <a href="#" class="tópicos__link">Galileu Galilei</a>
+      </li>
+      <li class="tópicos__item">
+        <a href="#" class="tópicos__link">Literatura</a>
+      </li>
+      <li class="tópicos__item">
+        <a href="#" class="tópicos__link">Álgebra</a>
+      </li>
+      <li class="tópicos__item">
+        <a href="#" class="tópicos__link">Dragão</a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="contato">
+    <h2 class="contato__titulo">Não perca as novidades!</h2>
+    <p class="contato__texto">
+      Atualizações de e-books, novos livros, promoções, rituais pagãos e outros.
+    </p>
+    <input type="email" placeholder="Cadastre seu e-mail" class="contato__email" />
+  </section>
+
+  <hr />
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".swiper", {
+      spaceBetween: 10,
+      slidesPerView: 3,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "bullets",
+      },
+    });
+  </script>
+
+</body>
+
+</html>
